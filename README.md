@@ -3,5 +3,5 @@ game1 = tetris
 
 game2 =   11
 
-game3 =   
+game3 = Snake Game
 
