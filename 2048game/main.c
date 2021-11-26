@@ -23,11 +23,12 @@ int main() {
     init_tiles();
 
     int input = 0;
-
+/*
     if (!load_game()) {
         new_game();
     }
-
+*/
+    new_game();
  start:
     while (1) {
         if (change) {
@@ -68,7 +69,7 @@ int main() {
         nanosleep(&sleep, NULL);
     }
  end:
-    save_game();
+    //save_game();
 
     del_tiles();
 

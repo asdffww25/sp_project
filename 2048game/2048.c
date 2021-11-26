@@ -26,7 +26,7 @@ unsigned int game_over = 0;
 struct timespec sleep = {0, 150000000};
 struct timespec anim8 = {0,  37500000};
 
-const char* const save_file_name = "save.game";
+//const char* const save_file_name = "save.game";
 
 const char* relation[] = {
     ".",
@@ -58,7 +58,7 @@ unsigned char board[BOARD_SIZE*BOARD_SIZE] = {0};
 int free_tiles[BOARD_SIZE*BOARD_SIZE];
 
 WINDOW* tiles[BOARD_SIZE][BOARD_SIZE];
-
+/*
 void save_game(void) {
     FILE* fp = fopen(save_file_name, "wb");
     if (fp) {
@@ -86,7 +86,7 @@ void save_game(void) {
         fclose(fp);
     }
 }
-
+*//*
 int load_game(void) {
     int loaded = 0;
     FILE* fp = fopen(save_file_name, "rb");
@@ -124,7 +124,7 @@ int load_game(void) {
     }
     return loaded;
 }
-
+*/
 void is_game_over() {
     int y, x;
     for (y = 0; y < BOARD_SIZE; ++y) {
