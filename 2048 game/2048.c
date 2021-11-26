@@ -26,8 +26,6 @@ unsigned int game_over = 0;
 struct timespec sleep = {0, 150000000};
 struct timespec anim8 = {0,  37500000};
 
-//const char* const save_file_name = "save.game";
-
 const char* relation[] = {
     ".",
     "2",
@@ -58,73 +56,7 @@ unsigned char board[BOARD_SIZE*BOARD_SIZE] = {0};
 int free_tiles[BOARD_SIZE*BOARD_SIZE];
 
 WINDOW* tiles[BOARD_SIZE][BOARD_SIZE];
-/*
-void save_game(void) {
-    FILE* fp = fopen(save_file_name, "wb");
-    if (fp) {
-        if (fwrite(&board_size, sizeof(board_size), 1, fp) != 1) {
-            fputs("Could not write the board size "
-                  "to the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        if (fwrite(&score, sizeof(score), 1, fp) != 1) {
-            fputs("Could not write the score "
-                  "to the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        if (fwrite(&high_score, sizeof(high_score), 1, fp) != 1) {
-            fputs("Could not write the high score "
-                  "to the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        if (fwrite(board, sizeof(*board), board_size*board_size, fp) !=
-            BOARD_SIZE*BOARD_SIZE) {
-            fputs("Could not write the board data "
-                  "to the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        fclose(fp);
-    }
-}
-*//*
-int load_game(void) {
-    int loaded = 0;
-    FILE* fp = fopen(save_file_name, "rb");
-    if (fp) {
-        int read_board_size = 0;
-        if (fread(&read_board_size, sizeof(board_size), 1, fp) != 1) {
-            fputs("Could not read the board size "
-                  "from the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        } else {
-            if (read_board_size != board_size) {
-                fputs("Save game board size and "
-                      "actual board size do not match\n", stderr);
-                exit(EXIT_FAILURE);
-            }
-        }
-        if (fread(&score, sizeof(score), 1, fp) != 1) {
-            fputs("Could not read the score "
-                  "from the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        if (fread(&high_score, sizeof(high_score), 1, fp) != 1) {
-            fputs("Could not read the high score "
-                  "from the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        if (fread(board, sizeof(*board), board_size*board_size, fp) !=
-            BOARD_SIZE*BOARD_SIZE) {
-            fputs("Could not read the board data "
-                  "from the save game file\n", stderr);
-            exit(EXIT_FAILURE);
-        }
-        loaded = 1;
-        fclose(fp);
-    }
-    return loaded;
-}
-*/
+
 void is_game_over() {
     int y, x;
     for (y = 0; y < BOARD_SIZE; ++y) {
