@@ -20,7 +20,10 @@ enum Direction get_next_move(enum Direction previous) {
       if (previous != UP) return DOWN;
     case KEY_UP:
       if (previous != DOWN) return UP;
+    case 'q':
+      break;
     default:
       return previous;
   }
+
 }
