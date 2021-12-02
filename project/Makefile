@@ -1,2 +1,3 @@
 all:
-	gcc keyboardMain.c -lncurses
+	gcc -o menu menu.c -lncurses
+
