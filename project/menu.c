@@ -103,9 +103,6 @@ int main()
         mvprintw(4, 51, "@");
         mvprintw(5, 52, "@");
         mvprintw(4, 53, "@");
-        for(int i=3; i<8; i++) {
-                mvprintw(i, 54, "@");
-        }
 
 	//E
 	
