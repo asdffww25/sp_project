@@ -114,13 +114,10 @@ int main()
         }
 	for(int i=57; i<60; i++) {
 		mvprintw(3, i, "@");
+		mvprintw(5, i, "@");
 		mvprintw(7, i, "@");
 	}
-	for(int i=57; i<60; i++) {
-		mvprintw(5, i, "@");
-	}	
-
-
+	
 
 	refresh();
 	print_menu(menu_win, highlight);
