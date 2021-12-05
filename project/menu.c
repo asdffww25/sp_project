@@ -31,8 +31,6 @@ int main()
 	cbreak();	/* Line buffering disabled. pass on everything */
 	startx = (80 - WIDTH) / 2;
 	starty = (24 - HEIGHT) / 2;
-	init_pair(1,COLOR_WHITE,COLOR_BLACK);
-	init_pair(2,COLOR_BLACK,COLOR_WHITE);
 	menu_win = newwin(HEIGHT, WIDTH, starty, startx);
 	keypad(menu_win, TRUE);
 
@@ -165,7 +163,6 @@ int main()
 	clrtoeol();
 	refresh();
 	endwin();
-	printf("You chose choice %d with choice string %s\n", choice, choices[choice - 1]);
 	return 0;
 }
 
